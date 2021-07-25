@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-
+const port = process.env.PORT || 5000
 //Establishing connection to the database
 
 const { MongoClient, ObjectId } = require("mongodb");
@@ -78,6 +78,6 @@ async function run(){
 run();
 
 
-app.listen(3000,()=>{
-console.log("server running at port 3000");
+app.listen(port,()=>{
+console.log("server running at port 5000");
 });
